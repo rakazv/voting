@@ -7,5 +7,5 @@ fn test_borda() {
 	result := b.result()
 	assert result[0].name == 'Csan'
 	assert result[1].name == 'Bsan'
-	assert result[0].point == result[1].point
+	assert result[0].score == result[1].score
 }

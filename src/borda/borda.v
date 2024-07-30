@@ -5,7 +5,7 @@ module borda
 struct Candidate {
 	name string
 mut:
-	point int
+	score int
 }
 
 struct Borda {
@@ -28,10 +28,10 @@ pub fn (mut b Borda) vote(ranks []int) ! {
 		return error('The length of ranks must be the same as the length of candidates. want = ${b.candidates.len}, got = ${ranks.len}')
 	}
 	for i, rank in ranks {
-		b.candidates[i].point += b.candidates.len - rank
+		b.candidates[i].score += b.candidates.len - rank
 	}
 }
 
 pub fn (mut bo Borda) result() []Candidate {
-	return bo.candidates.sorted(a.point > b.point)
+	return bo.candidates.sorted(a.score > b.score)
 }
