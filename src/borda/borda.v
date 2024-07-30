@@ -1,5 +1,7 @@
 module borda
 
+// Borda rule
+
 struct Candidate {
 	name string
 mut:

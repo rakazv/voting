@@ -1,5 +1,6 @@
 module majority
 
+// Majority rule
 
 pub fn new(names []string) !Majority {
 	return Majority.new(names)!
@@ -22,7 +23,9 @@ pub fn Majority.new(names []string) !Majority {
 	}
 	mut cands := []Candidate{}
 	for name in names {
-		cands << Candidate{name:name}
+		cands << Candidate{
+			name: name
+		}
 	}
 	return Majority{cands}
 }
