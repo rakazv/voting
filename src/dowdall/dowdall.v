@@ -1,8 +1,6 @@
 module dowdall
 
 // Dowdall rule
-// ペア敗者基準を満たさないから推奨されない。
-// Borda rule が推奨
 
 struct Candidate {
 	name string
